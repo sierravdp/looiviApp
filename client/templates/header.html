@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!--<div class="preload">
+	<div class="loading-effect">
+		<span></span>
+		<div class="icon"></div>
+	</div>
+</div>-->
+<header class=" ">
+	<a href="{% url 'index' %}">
+		<div id="logo" class="_left item-f" data-id="home">
+			<img class="logo_1" src="{% static 'img/logo.png' %}" alt="">
+			<img class="logo_2" src="{% static 'img/Looivi_simbolo_blanco.png' %}" alt="">
+		</div>
+	</a>
+	<div id="hamburger-menu" >
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<div class="filter-menu"></div>
+	<div  id="menu" class="_right">
+		<ul>
+				<li>
+					<a data-id="campaign" href="#campaign">Concursos</a>
+				</li>
+				<li> 
+					<a href = "#tools">VistaNeural</a> 
+				</li>
+				<li >
+					<a href="{% url 'prices' %}">Precios</a>
+				</li>
+				<li>
+					<a href="{% url 'login' %}">Iniciar</a>
+				</li>
+
+				<li class="btn-not <?= strcmp($module, 'login') === 0? 'btn-not-f':'' ?>">
+		            <div class="_btn _btn-cool  pulse infinite animated">
+	    				<p>
+							<a href="register.php">Registrarse</a>
+						</p>
+	    			</div>
+				</li>
+		</ul>
+	</div>
+</header>

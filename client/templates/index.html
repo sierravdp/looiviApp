@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load static %}
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Looivi</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body onload="onInit();">
+	{% include "header.html" %}
+	{% include "home.html" %}
+	<div class="middle-sect"> 
+	<br><br><br>
+		<h2 style="margin-top: -25px;">El sistema de inteligencia artificial de Looivi es completamente autónomo. <br> No es necesario ser un científico para entenderlo y enseñarle.</h2>
+	</div>
+	{% include "campaign.html" %}
+	<div class="middle-sect"  data-id="campaign" style="align-items: center; bottom: -50px; position: relative;	"> 
+	<br><br>
+		<h1> <strong> Programa Lanzamiento </strong> </h1>
+		<h2>¿Necesitas una mano <br> implementando tu estrategia <br> de marketing?
+		</h2>
+		<br><br>
+		<div class="_btn _btn-green s-animate s-scroll v_hidden" data-space="0.6" data-animation="zoomIn" data-time="0.5">
+			<p>
+				<a href="register.html">Más información</a>
+			</p>
+		</div>
+		<br><br><br><br>
+	</div>
+	{% include "tools.html" %}
+	{% include "started.html" %}
+	{% include "footer.html" %}
+
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/animation.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/swiper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

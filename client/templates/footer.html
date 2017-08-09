@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<footer>
+	<div class="container-footer">
+		<a >
+			<img src="{% static 'img/logo.png' %}">
+		</a>
+		<ul>
+			<li><i class="fa fa-google-plus"></i></li>
+			<li><i class="fa fa-facebook"></i></li>
+			<li><i class="fa fa-twitter"></i></li>
+		</ul>
+		<div class="_menu-footer">
+			<div class="col-md-3 col-sm-3 col-lg-3 col-footer">
+				<h2>Looivi</h2>
+				<ul>
+					<li class="item-f"><a href="#">Acerca de Looivi</a> </li>
+					<li class="item-f"><a href="{% url 'team' %}"> El equipo </a></li>
+					<li class="item-f"><a href="#"> Carreras</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-3 col-lg-3 col-footer">
+				<h2>Productos</h2>
+				<ul>
+					<li class="item-f"><a href="campaign">Campañas</a> </li>
+					<li class="item-f"><a href="tools"> Herramientas </a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-3 col-lg-3 col-footer">
+				<h2>Recursos</h2>
+				<ul>
+					<li class="item-f"><a href="{% url 'prices' %}">Precios</a> </li>
+					<li class="item-f"><a href="#"> Blog </a></li>
+					<li class="item-f"><a href="#"> Términos de condiciones </a></li>
+					<li class="item-f"><a href="#"> Políticas de privacidad </a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-3 col-lg-3 col-footer">
+				<h2>Contáctanos </h2>
+			</div>
+			
+		</div>
+		<div class="col-md-12" style="padding-top: 0px;">
+			<p>Mayor información o sugerencias, E-mail: looivi@support.com</p>
+			<p>© 2017 Looivi. Todos los derechos reservados.</p>
+		</div>
+		
+	</div>
+</footer>

@@ -1,0 +1,165 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Looivi</title>
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style_login.css' %}" rel="stylesheet" />
+     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="{% static 'assets/plugins/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <style type="text/css">
+        @font-face {
+            font-family: ginora;
+            src: url({% static 'fonts/NutmegRegular.otf' %});
+        }
+    </style>
+</head>
+<body>
+	<section id="price-sec">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12" >
+                    <!--<div class="col-sm-3 plan_div" style="top:50px; display: block;">
+                        <ul class="plan">
+                            <li class="plan-head">Plan inicio</li>
+                            <ul class="characteristics">
+                            <li>Todas las características del plan crecimiento, menos:</li><br>
+                            <li><strong>5000</strong> Participantes</li>
+                            <li>Creación de grupones</li>
+                            <li>Arbol de referido</li>
+                            </ul>
+                            <li class="main-price">$60.000 COP/mes</li>
+                            <li class="bottom">
+                                <a href="#" class="btn">Comprar</a>
+                            </li>
+                        </ul>
+                    </div>-->
+                    <div class="container" style="position: relative; ">
+                        <div class="col-sm-4 col-price"> 
+                            <div class="big-square-prices plan">
+                            <!--<div class="tag"> <a href="#">Ver más</a> </div>-->
+                                <h2 style="color: #5FB09F; text-align: center;">Plan inicio</h2>
+                                <div class="circle-price">
+                                    <h2 style="position: absolute; left: 10%; top: 5%">$</h2><h1 style="font-size: 100px; position: absolute; left: 20%; top: -5%">20</h1>
+                                    <h3 style="position: absolute;top: 50%; left: 20%"><strong> COP/Mes </strong></h3>
+                                </div>
+                                <ul class="characteristics2" style="color: #5FB09F">
+                                    <li><strong>5.000</strong> Participantes</li>
+                                    <li>Fans ilimitados</li>
+                                    <li>Creación de concursos</li>
+                                    <li>Creación de cupones</li>
+                                    <li>Creación de grupones</li>
+                                </ul>
+                                <button class="btn normal-button" style="color: #F5495D;">Comprar</button>
+                                <br>
+                                <br>
+                                <!--<button class="tag"><img style="width: 60%; position: absolute; top: 40%; left: 20%" src="{% static 'images/looivi-white-symbol.png' %}"/></button >-->
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-price"> 
+                            <div class="big-square-prices plan">
+                            <!--<div class="tag"> <a href="#">Ver más</a> </div>-->
+                                <h2 style="color: #5FB09F; text-align: center;">Plan crecimiento</h2>
+                                <div class="circle-price">
+                                    <h2 style="position: absolute; left: 10%; top: 5%">$</h2><h1 style="font-size: 100px; position: absolute; left: 20%; top: -5%">20</h1>
+                                    <h3 style="position: absolute;top: 50%; left: 20%"><strong> COP/Mes </strong></h3>
+                                </div>
+                                <ul class="characteristics2" style="color: #5FB09F">
+                                    <li>Todas las características del plan inicio, más:</li>
+                                    <li><strong>5.000</strong> Participantes</li>
+                                    <li>Estadísticas de Facebook</li>
+                                    <li>Arból de referidos</li>
+                                </ul>
+                                <button class="btn normal-button" style="color: #F5495D;">Comprar</button>
+                                <br>
+                                <br>
+                                <!--<button class="tag"><img style="width: 60%; position: absolute; top: 40%; left: 20%" src="{% static 'images/looivi-white-symbol.png' %}"/></button >-->
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-price"> 
+                            <div class="big-square-prices plan">
+                            <!--<div class="tag"> <a href="#">Ver más</a> </div>-->
+                                <h2 style="color: #5FB09F;">Plan negocio</h2>
+                                <div class="circle-price">
+                                    <h2 style="position: absolute; left: 10%; top: 5%">$</h2><h1 style="font-size: 100px; position: absolute; left: 20%; top: -5%">20</h1>
+                                    <h3 style="position: absolute;top: 50%; left: 20%"><strong> COP/Mes </strong></h3>
+                                </div>
+                                <ul class="characteristics2" style="color: #5FB09F">
+                                    <li>Todas las características del plan crecimiento, más:</li>
+                                    <li><strong>40.000</strong> Participantes</li>
+                                    <li>Dominio privado</li>
+                                    <li>Prioridad en soporte</li>
+                                    <li>Encriptación de datos</li>
+                                    <li>Estadísticas</li>
+                                    <li>Mercadeo de correo</li>
+                                </ul>
+                                <button class="btn normal-button" style="color: #F5495D;">Comprar</button>
+                                <br>
+                                <br>
+                                <!--<button class="tag"><img style="width: 60%; position: absolute; top: 40%; left: 20%" src="{% static 'images/looivi-white-symbol.png' %}"/></button >-->
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!--<div class="col-sm-4 plan_div recommended">
+                        <ul class="plan recommended">
+                            <li><strong>Recomendado</strong></li>
+                            <li class="plan-head recommended">Plan crecimiento</li>
+                            <ul class="characteristics2">
+                            <li><strong>10.000</strong> Participantes</li>
+                            <li>Fans ilimitados</li>
+                            <li>Creación de concursos</li>
+                            <li>Creación de cupones</li>
+                            <li>Creación de grupones</li>
+                            <li>Arból de referidos</li>
+                            </ul>
+                            <li class="main-price">$170.000 COP/mes</li>
+                            <li class="bottom">
+                                <a href="#" class="btn">Comprar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-3 plan_div" style="top:50px;">
+                        <ul class="plan">
+                            <li class="plan-head">Plan negocio</li>
+                            <ul class="characteristics">
+                            <li>Todas las características del plan crecimiento, más:</li><br>
+                            <li><strong>40.000</strong> Participantes</li>
+                            <li>Dominio privado</li>
+                            <li>Prioridad en soporte</li>
+                            <li>Encriptación de datos</li>
+                            <li>Estadísticas</li>
+                            <li>Big data</li>
+                            <li>Mercadeo de correo</li>
+                            </ul>
+                            <li class="main-price">$400.000 COP/mes</li>
+                            <li class="bottom">
+                                <a href="#" class="btn">Comprar</a>
+                            </li>
+                        </ul>
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

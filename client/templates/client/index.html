@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% if user and not user.is_anonymous %} 
+	 {{ user.get_full_name }}  {% endif %} </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/hamburgers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slidemenu.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/client/client.css' %}">
+	<!--link rel="stylesheet" type="text/css" href="./css/main.css"-->
+</head>
+<body onload="onInit();">
+<div id="StayFocusd-infobar" style="display: none; top: 0px;">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+	{% include 'client/header.html' %}
+	
+	<div class="contentWrapper-client">
+		<div class="upMenu-client">
+			<ul>
+				<li class="main-li"><a href="{% url 'create' %}"> <strong> » Crea una campaña </strong></a></li>
+				<!--<li>Editar plantilla</li>-->
+			</ul>
+		</div>
+		<div class="slider-client swiper-container-horizontal">
+			<div class="swiper-button-prev swiper-button-white"></div>
+			<div class="swiper-wrapper" style="transform: translate3d(-5900px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" style="width: 1180px;"> 
+					<img src="{% static 'img/client/prospectos.png' %}">
+					<h4>Prospectos</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="0" style="width: 1180px;">
+					<img src="{% static 'img/client/sorteos.png' %}">
+					<h4>Sorteos</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="1" style="width: 1180px;"> 
+					<img src="{% static 'img/client/instantaneo.png' %}">
+					<h4>Premios Isntantaneos</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="2" style="width: 1180px;"> 
+					<img src="{% static 'img/client/ofertas_de_grupo.png' %}">
+					<h4>Ofertas de Grupos</h4>
+				</div>
+				<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="3" style="width: 1180px;"> 
+					<img src="{% static 'img/client/cupones.png' %}">
+					<h4>Cupones</h4>
+				</div>
+				<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="4" style="width: 1180px;">
+					<img src="{% static 'img/client/redes_sociales.png' %}">
+					<h4>Redes Sociales</h4>
+				</div>
+				<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="5" style="width: 1180px;"> 
+					<img src="{% static 'img/client/especiales.png' %}">
+					<h4>Especiales</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="6" style="width: 1180px;"> 
+					<img src="{% static 'img/client/red_de_amigos.png' %}">
+					<h4>Redes de amigos</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="7" style="width: 1180px;"> 
+					<img src="{% static 'img/client/prospectos.png' %}">
+					<h4>Prospectos</h4>
+				</div>
+        	<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 1180px;">
+					<img src="{% static 'img/client/sorteos.png' %}">
+					<h4>Sorteos</h4>
+				</div></div>
+        	<div class="swiper-button-next swiper-button-white"></div>
+        	<div class="swiper-pagination hide swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+		</div>
+		<div class="contentList-client">
+			<div class="filter-client">
+				<div class="iconFilter-client">
+					<i class="fa fa-filter" aria-hidden="true"></i>
+					<h4>Filtros</h4>
+				</div>
+				<div class="dropdownMenu-client">
+					<h4>Estado</h4>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Todo
+						<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="http://35.185.1.61/client/#">Activo</a></li>
+							<li><a href="http://35.185.1.61/client/#">Eliminado</a></li>
+							<li><a href="http://35.185.1.61/client/#">Completado</a></li>
+							<li><a href="http://35.185.1.61/client/#">No publicado</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="listCampaign-client table-responsive">
+				<table class="table">
+					<thead>
+					    <tr>
+					    	<th></th>
+					    	<th>Campaña</th>
+					    	<th>Estado</th>
+					    	<th>Vistas</th>
+					    	<th>Conversiones</th>
+					    	<th>Índice de consersión</th>
+					    	<th></th>
+					    </tr>
+					</thead>
+					<tbody>
+					    <tr>
+					    	<th scope="row"><img src="{% static 'img/client/sorteos.png' %}"></th>
+					    	<td class="colCampaignTable-client"><div class="titleTable-client">Sorteo (No. 0000)</div><div class="subTitleTable-client"><a href="http://35.185.1.61/client/#">http://looivi/</a></div></td>
+					    	<td><div class="statusTable-client">Activo</div></td>
+					    	<td>0</td>
+					    	<td>0</td>
+					    	<td>0,00%</td>
+					    	<td><i class="fa fa-cog" aria-hidden="true"></i></td>
+					    </tr>
+					    <tr>
+					    	<th scope="row"><img src="{% static 'img/client/sorteos.png' %}"></th>
+					    	<td class="colCampaignTable-client"><div class="titleTable-client">Sorteo (No. 0000)</div><div class="subTitleTable-client"><a href="http://35.185.1.61/client/#">http://looivi/</a></div></td>
+					    	<td><div class="statusTable-client">Activo</div></td>
+					    	<td>0</td>
+					    	<td>0</td>
+					    	<td>0,00%</td>
+					    	<td><i class="fa fa-cog" aria-hidden="true"></i></td>
+					    </tr>
+					    <tr>
+					    	<th scope="row"><img src="{% static 'img/client/sorteos.png' %}"></th>
+					    	<td class="colCampaignTable-client"><div class="titleTable-client">Sorteo (No. 0000)</div><div class="subTitleTable-client"><a href="http://35.185.1.61/client/#">http://looivi/</a></div></td>
+					    	<td><div class="statusTable-client">Activo</div></td>
+					    	<td>0</td>
+					    	<td>0</td>
+					    	<td>0,00%</td>
+					    	<td><i class="fa fa-cog" aria-hidden="true"></i></td>
+					    </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/slidemenu.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/animation.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/swiper.min.js' %}"></script>
+	<script type="text/javascript">
+		var swiper;
+		function onInit() {
+			if ($(window).width() >= 971) { 
+				preView = 4;
+	       	}  
+
+			if ($(window).width() <= 970 && $(window).width() >= 768) { 
+				preView = 2;
+	       	}  
+
+	       	if ($(window).width() <= 768) { 
+				preView = 1;
+	       	} 
+			swiper = new Swiper('.slider-client', {
+		        pagination: '.swiper-pagination',
+		        slidesPerView: preView,
+		        paginationClickable: true,
+		        spaceBetween: 0,
+		        keyboardControl: true,
+		        speed: 1000,
+		        autoplay: 10000,
+		        loop: true,
+		       	nextButton: '.swiper-button-next',
+        		prevButton: '.swiper-button-prev'
+		    });
+		}
+
+		function btnMenuBehavior(){
+			let btnMenu = $('#hamburger-menu');
+			if(btnMenu.hasClass('open')){
+				btnMenu.removeClass('open');
+				$('#menu').removeClass('open-menu');
+				$('.filter-menu').fadeToggle();
+			}else{
+				btnMenu.addClass('open');
+				$('#menu').addClass('open-menu');
+				$('.filter-menu').fadeToggle();
+			}
+		}
+	</script>
+
+
+</body></html>

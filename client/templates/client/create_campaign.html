@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% if user and not user.is_anonymous %} 
+	 {{ user.get_full_name }}  {% endif %} </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slidemenu.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/hamburgers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/client/client.css' %}">
+	<!--link rel="stylesheet" type="text/css" href="./css/main.css"-->
+
+</head>
+<body>
+	{% include 'client/header.html' %}
+
+	<div class="contentWrapper-client">
+		<div class="upMenu-client">
+			<ul>
+				<li class="main-li"> <strong> » Crear sorteo </strong></li>
+				<li>|</li>
+				<li class="sub-li"> <strong> Elige una plantilla </strong></li>
+				<!--<li>Editar plantilla</li>-->
+			</ul>
+		</div>
+	</div>
+
+	<div class="row create-sect">
+		<div class="col-md-12 col-sm-12 col-lg-12 create-main">
+			<div class="col-md-2 col-sm-2 col-lg-2 template-col">
+				Nombre plantilla
+				<div class="template"></div> <br>
+				<button class="select">Usar plantilla</button>
+			</div>
+			<div class="col-md-1 col-sm-1 col-lg-1"></div>
+			<div class="col-md-2 col-sm-2 col-lg-2 template-col">
+				Nombre plantilla
+				<div class="template"></div><br>
+				<button class="select">Usar plantilla</button>
+			</div>
+			<div class="col-md-1 col-sm-1 col-lg-1"></div>
+			<div class="col-md-2 col-sm-2 col-lg-2 template-col">
+				Nombre plantilla
+				<div class="template"></div><br>
+				<button class="select">Usar plantilla</button>
+			</div>
+			<div class="col-md-1 col-sm-1 col-lg-1"></div>
+			<div class="col-md-2 col-sm-2 col-lg-2 template-col">
+				Nombre plantilla
+				<div class="template"></div><br>
+				<button class="select">Usar plantilla</button>
+			</div>
+		</div>
+
+		<div class="col-md-12 col-sm-12 col-lg-12 create-main">
+			<div class="col-md-2 col-sm-2 col-lg-2 template-col">
+				Nombre plantilla
+				<div class="template"></div> <br>
+				<button class="select">Usar plantilla</button>
+			</div>
+			<div class="col-md-1 col-sm-1 col-lg-1"></div>
+			<div class="col-md-2 col-sm-2 col-lg-2 template-col">
+				Nombre plantilla
+				<div class="template"></div><br>
+				<button class="select">Usar plantilla</button>
+			</div>
+			<div class="col-md-1 col-sm-1 col-lg-1"></div>
+			<div class="col-md-2 col-sm-2 col-lg-2 template-col">
+				Nombre plantilla
+				<div class="template"></div><br>
+				<button class="select">Usar plantilla</button>
+			</div>
+			<div class="col-md-1 col-sm-1 col-lg-1"></div>
+			<div class="col-md-2 col-sm-2 col-lg-2 template-col">
+				Nombre plantilla
+				<div class="template"></div><br>
+				<button class="select">Usar plantilla</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/animation.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/swiper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/slidemenu.js'%}"></script>
+	
+</body>
+</html>

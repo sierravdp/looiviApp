@@ -1,0 +1,63 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Looivi</title>
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style_login.css' %}" rel="stylesheet" />
+     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="{% static 'assets/plugins/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <style type="text/css">
+        @font-face {
+            font-family: ginora;
+            src: url({% static 'fonts/ChampagneLimousines.ttf' %});
+        }
+    </style>
+</head>
+<body>
+  {% if registered == True %}
+        <script type="text/javascript">alert('Este correo ya existe, inicia sesión o regístrate con un correo diferente')</script>
+  {% endif %}
+	<div id="signupEmail">
+      <div class="modal-dialog">
+        <div>
+            <div class="modal-header">
+                <h2 class="text-center" style="color: #FFF">Regístrate en Looivi con Facebook</h2>
+                <a href="{% url 'social:begin' 'facebook' %}"><button class="btn-fb" name="fb_login" style="width: 80px;height: 80px;"><img src="{% static 'images/fb_button.png' %}" style="height: 80%"></button></a>  
+            </div>
+            	<p class="text-center p_text" id="email-login">No deseas registrarte con Facebook?<br>
+            		<strong><a href="#" id="email-link">Regístrate</a></strong> usando tu correo y contraseña.
+            	</p>
+            <div class="modal-body email-box" style="left: 10%; display: none;">
+                <form method="POST"> {% csrf_token %}
+                  <div class="form-group p_text_2" style="text-align: center;">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                  </div>
+                  <div class="form-group p_text_2" style="text-align: center;">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" name="password" class="form-control" id="contrasena" placeholder="Ingresa tu contraseña">
+                  </div>
+                  <button type="submit" class="btn-normal" name="new_business"><strong> Regístrate</strong></button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

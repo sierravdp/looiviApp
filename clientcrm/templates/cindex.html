@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://35.185.1.61/client/# -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cliente</title>
+	<link rel="stylesheet" type="text/css" href="./Cliente_files/bootstrap.min.css">
+	<link href="./Cliente_files/css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./Cliente_files/animate.css">
+	<link rel="stylesheet" type="text/css" href="./Cliente_files/swiper.min.css">
+	<!--link rel="stylesheet" type="text/css" href="./css/main.css"-->
+</head>
+<body onload="onInit();"><div id="StayFocusd-infobar" style="display: none; top: 0px;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+	<style>
+		*, *:before, *:after{
+			box-sizing: border-box;
+		}
+
+		body{
+			position: relative;
+			margin: 0px;
+			height: 100%;
+		}
+
+		p{
+		  margin: 0 0 10px;
+		  font-family: 'NutmegThin';
+		}
+
+		ol, ul {
+		    margin-top: 0;
+		    margin-bottom: 10px;
+		}
+
+		a{
+		  color: white;
+		  text-decoration: none !important;
+		}
+
+		a:hover{
+		  color: white;
+		  text-decoration: none !important;
+		}
+
+		header{
+			position: relative;
+			width: 100%;
+			height: 65px;
+			padding: 0px 0px 0px 10px;
+			background-color: #5ca499;
+		}
+
+			.logo-client{
+				width: 85px;
+			    height: 100%;
+			    display: table;
+			    position: relative;
+			    margin-left: 10px;
+			    float: left;
+			    padding: 5px;
+			}
+
+				.logo-client img{
+				    position: absolute;
+				    width: 100%;
+				    display: table-cell;
+				    vertical-align: middle;
+				    cursor: pointer;
+				    -webkit-transform: translate(-50%,0);
+				    transform: translate(-50%,0);
+				    left: 50%;
+				}
+			.nav-client{
+				margin-left: 20px;
+				display: table-cell;
+				height: 100%;
+			    transition: 0.5s ease;
+			    z-index: 2;
+			    float: left;
+			    padding: 5px;
+			}
+				.nav-client ul{
+				    display: table;
+				    padding-left: 0px;
+    				padding-top: 10px;
+
+				}
+					.nav-client ul li{
+						font-family: 'Nutmeg';
+					    display: table-cell;
+					    cursor: pointer;
+					    margin-left: 8px;
+					    list-style: none;
+					    float: left;
+					    font-size: 2rem;
+    					color: #fff;
+    					padding: 0px 20px;
+    					transition: 0.2s ease;
+					}
+
+					.nav-client ul li.active{
+						font-weight: 700;
+					}
+
+					.nav-client ul li:not(.active):hover{
+						transition: 0.2s ease;
+						font-weight: 600;
+					}
+
+					.nav-client ul li:not(:last-child){
+						
+						border-right: 3px solid #fff; 
+					}
+
+					.nav-client ul li.respons-client{
+						display: none;
+					}
+
+			  #hamburger-menu {
+			      display: none;
+			      position: relative;
+			      width: 25px;
+			      height: 20px;
+			      margin: 23px 15px;
+			      cursor: pointer;
+			      z-index: 3;
+			  }
+
+			  #hamburger-menu span {
+			      opacity: 1;
+			      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+			      left: 0;
+			      display: block;
+			      width: 100%;
+			      height: 2px;
+			      border-radius: 10px;
+			      color: black;
+			      background-color: white;
+			      position: absolute;
+			      -webkit-transform: rotate(0deg);
+			      transform: rotate(0deg);
+			      -webkit-transition: .4s ease-in-out;
+			      transition: .4s ease-in-out;
+			  }
+
+			  #hamburger-menu span:nth-child(1) {
+			      top: 0;
+			  }
+			  #hamburger-menu span:nth-child(2) {
+			      top: 9px;
+			  }
+			  #hamburger-menu span:nth-child(3) {
+			      top: 18px;
+			  }
+			  #hamburger-menu.open span:nth-child(1) {
+			      top: 9px;
+			      -webkit-transform: rotate(135deg);
+			      transform: rotate(135deg);
+			  }
+			  #hamburger-menu.open span:nth-child(2) {
+			      opacity: 0;
+			      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			      left: 130px;
+			  }
+			  #hamburger-menu.open span:nth-child(3) {
+			      top: 9px;
+			      -webkit-transform: rotate(-135deg);
+			      transform: rotate(-135deg);
+			  }
+			  
+			  .filter-menu{
+			    position: fixed;
+			    width: 100%;
+			    height: 100%;
+			    left: 0;
+			    top: 0;
+			    background-color: rgba(0,0,0, 0.6);
+			    z-index: 2;
+			    display: none;
+			    left: -100%;
+			  }
+
+			.profileContent-client{
+				display: table;
+				height: 100%;
+			    transition: 0.5s ease;
+			    z-index: 2;
+			    float: right;
+			}
+				.notification-client{
+					position: relative;
+					display: table-cell;
+					vertical-align: middle;
+					height: 100%;
+					padding-right: 25px;
+				}
+
+					.notification-client i{
+						font-size: 2.5rem;
+					    display: table-cell;
+					    color: #fff;
+					    cursor: pointer;
+					}
+
+				.profile-client{
+					position: relative;
+				    display: table;
+				    height: 100%;
+				    transition: 0.5s ease;
+				    z-index: 2;
+				    float: right;
+				    padding: 0px 10px;
+				    background-color: #5DB599;
+				    cursor: pointer;
+				}
+
+					.imageProfile-client{
+						margin-top: 7px;
+					    position: relative;
+					    display: inline-table;
+					    vertical-align: middle;
+					    width: 50px;
+					    height: 50px;
+					    max-width: 50px;
+					    max-height: 50px;
+					    border-radius: 50%;
+					    overflow: hidden;
+					    text-align: center;
+					    transition: 0.3s ease;
+					    z-index: 2;
+					    padding: 1px;
+					    background-color: #fff;
+					}
+
+						.imageProfile-client .imgProfile-client{
+							background-image: url(./img/1.jpg);
+						    width: 100%;
+						    height: 100%;
+						    border-radius: 50%;
+						    overflow: hidden;
+						    background-repeat: no-repeat;
+						    background-position: center;
+						    background-size: cover;
+						}
+
+					.nameProfile-client{
+						display: table-cell;
+					    vertical-align: middle;
+					    padding: 10px;
+					    font-family: 'NutmegThin';
+					    font-size: 1.5rem;
+					    color: #fff;
+					}
+		.contentWrapper-client{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+
+			.upMenu-client{
+				width: 100%;
+				position: relative;
+				border-bottom: 2px dotted #CBCBCB;
+			}
+
+				.upMenu-client ul{
+				    display: table;
+				    padding-left: 20px; 
+    				padding-top: 10px;
+
+				}
+					.upMenu-client ul li{
+						font-family: 'Nutmeg';
+					    display: table-cell;
+					    cursor: pointer;
+					    list-style: none;
+					    float: left;
+					    font-size: 1.3rem;
+    					color: #5CA499;
+    					padding: 0px 10px;
+    					transition: 0.2s ease;
+					}
+
+					.upMenu-client ul li:last-child{
+    					color: #E64A5E;
+    					transition: 0.2s ease;
+    					border-left: 1px solid #5CA499;
+					}
+			
+			.slider-client{
+				width: 100%;
+			    min-height: 200px;
+			    height: 100%;
+			    position: relative;
+			    z-index: 1;
+			    background-color: #CBCBCB;
+			    padding: 0px 50px;
+			}
+
+				.swiper-button-prev, .swiper-button-next{
+					padding: 0px 50px;
+				}
+
+				.swiper-slide{
+					text-align: center;
+			        font-size: 18px;
+			        background: #CBCBCB;
+				}
+					.swiper-slide img{
+						display: inline-block;
+						padding: 20px;
+						width: 200px;
+						height: 200px;
+						max-height: 200px;
+						max-width: 200px;
+					}
+
+					.swiper-slide h4{
+						margin: 0;
+						padding-bottom: 10px; 
+						font-family: 'NutmegThin';
+						color: #fff;
+						display: block;
+					}
+			.contentList-client{
+				position: relative;
+			}
+				.filter-client{
+					position: relative;
+					padding: 10px
+				}
+					.iconFilter-client{
+						vertical-align: middle;
+						display: inline-block;
+						position: relative;
+    					padding: 0px 5px 0px 20px;
+					}
+
+					.iconFilter-client i{
+						vertical-align: middle;
+						display: inline-block;
+						color: #E64A5E;
+						font-size: 3.5rem;
+						padding-bottom: 5px;
+					}
+
+					.iconFilter-client h4{
+						padding: 0px 10px 0px 3px;
+						border-right: 3px solid #E64A5E;
+						display: inline-block;
+						color: #E64A5E;
+						font-size: 2rem;
+					}
+
+					.dropdownMenu-client{
+						display: inline-block;
+						position: relative;
+					}
+
+						.dropdownMenu-client .dropdown{
+							display: inline-block;
+							position: relative;
+						}
+
+							.dropdownMenu-client .dropdown ul{
+								background-color: #F4F4F4;
+						    	color: #848484;
+							}
+
+								.dropdownMenu-client .dropdown ul li a:hover{
+							    	background-color: #C4C4C4;
+								}
+
+								.dropdownMenu-client .dropdown ul li a{
+							    	color: #848484;
+								}
+
+						.dropdownMenu-client h4{
+							vertical-align: middle;
+							display: inline-block;
+							font-weight: 400;
+							color: #CBCBCB;
+						}
+
+						.dropdownMenu-client .dropdown-toggle.btn-default{
+							min-width: 160px;
+							text-align: left; 
+							padding: 3px 15px;
+						    border-radius: 2px;
+						    background-color: #CBCBCB;
+						    color: #848484;
+						}
+
+						.dropdownMenu-client .open>.dropdown-toggle.btn-default{
+						    color: #848484;
+						}
+
+							.dropdownMenu-client .dropdown-toggle.btn-default span{
+								margin-left: 70%;
+							}
+
+				.listCampaign-client{
+					min-height: 100px;
+				}
+
+					.listCampaign-client table thead tr{
+						
+					}
+
+					.listCampaign-client table thead th{
+						border-bottom: 2px dotted #CBCBCB;
+					}
+
+					.listCampaign-client table tbody img{
+						background: #5CA499;
+					    border-radius: 50%;
+					    height: auto;
+					    width: 40px;
+					}
+
+					.listCampaign-client table tbody th{
+						border-bottom: 2px dotted #CBCBCB;
+						vertical-align: middle;
+						text-align: right;
+					}
+
+					.listCampaign-client table tbody td{
+						border-bottom: 2px dotted #CBCBCB;
+						vertical-align: middle;
+					}
+
+					.listCampaign-client table tbody td .statusTable-client{
+						display: inline-block;
+						border-radius: 2px;
+						padding: 2px 5px;
+						background-color: #5CA499;
+						color: #fff;
+					}
+
+					.listCampaign-client table tbody td .titleTable-client{
+						color: #5CA499;
+					}
+
+					.listCampaign-client table tbody td .subTitleTable-client a
+					{
+						color: #333;
+					}
+
+					.listCampaign-client table tbody td .subTitleTable-client a:hover
+					{
+						color: #E64A5E;
+					}
+
+					.listCampaign-client table tbody td.colCampaignTable-client{
+						min-width: 300px; 
+					}
+
+	  	@media screen and (max-width: 768px) {
+
+	  		.nav-client ul li:not(:last-child) {
+    			border-right: none;
+			}
+
+		    #hamburger-menu{
+		      float: right;
+		      display: block;
+		    }
+
+		    #menu{
+		      position: fixed;
+		      height: 100%;
+		      float: right;
+		      min-height: 320px;
+		      overflow-y: auto;
+		      overflow-x: auto;
+		      width: 50%;
+		      min-width: 255px;
+		      right: -100%;
+		      top: 0px;
+		      background-color: #5ca499;
+		    }
+
+		    .filter-menu{
+		      left: 0;
+		    }
+
+		    #menu.open-menu{
+		      right: 0%;
+		    }
+
+		    #menu ul{
+		        width: 100%;
+		        position: absolute;
+		        -webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+		        left: 50%;
+		        top: 50%;
+		        padding: 0px;
+		    }
+
+		    #menu ul li{
+		      display: table;
+		        margin: auto;
+		        margin-bottom: 8px;
+		        float: initial;
+		    }
+
+		    #menu ul li.btn-not-f{
+		      margin-top: 24px;
+		    }
+
+		    header ul li:not(.btn-not){
+		      font-size: 18px;
+		      padding: 8px 16px;
+		    }
+
+		    header ul li.btn-not p a{
+		      font-size: 14px;
+		    }
+
+		    .nav-client ul li.respons-client{
+				display: block;
+			}
+
+			.profileContent-client{
+				display: none;
+			}
+
+			.iconFilter-client {
+				padding: 0;
+			}
+
+			.iconFilter-client h4{
+				border-right: none;
+			}
+
+			.filter-client{
+				text-align: center;			
+			}
+
+			header{
+			    width: 100%;
+			    height: 80px;
+			    max-height: 80px;
+			    position: fixed;
+			    z-index: 100;
+			    padding: 8px 32px;
+			}
+
+			.contentWrapper-client{
+				top: 80px;
+			}
+		}
+	</style>
+	<header>
+		<div class="logo-client">
+			<img src="{% static 'img/logo.png' %}>
+		</div>
+		<div id="hamburger-menu" onclick="btnMenuBehavior();">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="filter-menu" onclick="btnMenuBehavior();"></div>
+		<div id="menu" class="nav-client">
+			<ul>
+				<li class="respons-client"><a href="http://35.185.1.61/client/#">Perfil</a></li>
+				<li class="active"><a href="http://35.185.1.61/client/#">Campañas</a></li>
+				<li><a href="http://35.185.1.61/client/#">Contactos</a></li>
+				<li class="respons-client"><a href="http://35.185.1.61/client/#">Notificaciones</a></li>
+			</ul>
+		</div>
+		<div class="profileContent-client">
+			<div class="notification-client">
+				<a href="http://35.185.1.61/client/#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+			</div>
+			<div class="profile-client">
+				<div class="imageProfile-client">
+					<div class="imgProfile-client"></div>
+				</div>
+				<div class="nameProfile-client">Admin Looivi</div>
+			</div>
+		</div>
+	</header>
+	<div class="contentWrapper-client">
+		<div class="upMenu-client">
+			<ul>
+				<li>» Crea una campaña</li>
+				<li>Editar plantilla</li>
+			</ul>
+		</div>
+		<div class="slider-client swiper-container-horizontal">
+			<div class="swiper-button-prev swiper-button-white"></div>
+			<div class="swiper-wrapper" style="transform: translate3d(-5900px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" style="width: 1180px;"> 
+					<img src="./Cliente_files/prospectos.png">
+					<h4>Prospectos</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="0" style="width: 1180px;">
+					<img src="./Cliente_files/sorteos.png">
+					<h4>Sorteos</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="1" style="width: 1180px;"> 
+					<img src="./Cliente_files/instantaneo.png">
+					<h4>Premios Isntantaneos</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="2" style="width: 1180px;"> 
+					<img src="./Cliente_files/ofertas_de_grupo.png">
+					<h4>Ofertas de Grupos</h4>
+				</div>
+				<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="3" style="width: 1180px;"> 
+					<img src="./Cliente_files/cupones.png">
+					<h4>Cupones</h4>
+				</div>
+				<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="4" style="width: 1180px;">
+					<img src="./Cliente_files/redes_sociales.png">
+					<h4>Redes Sociales</h4>
+				</div>
+				<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="5" style="width: 1180px;"> 
+					<img src="./Cliente_files/especiales.png">
+					<h4>Especiales</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="6" style="width: 1180px;"> 
+					<img src="./Cliente_files/red_de_amigos.png">
+					<h4>Redes de amigos</h4>
+				</div>
+				<div class="swiper-slide" data-swiper-slide-index="7" style="width: 1180px;"> 
+					<img src="./Cliente_files/prospectos.png">
+					<h4>Prospectos</h4>
+				</div>
+        	<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 1180px;">
+					<img src="./Cliente_files/sorteos.png">
+					<h4>Sorteos</h4>
+				</div></div>
+        	<div class="swiper-button-next swiper-button-white"></div>
+        	<div class="swiper-pagination hide swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+		</div>
+		<div class="contentList-client">
+			<div class="filter-client">
+				<div class="iconFilter-client">
+					<i class="fa fa-filter" aria-hidden="true"></i>
+					<h4>Filtros</h4>
+				</div>
+				<div class="dropdownMenu-client">
+					<h4>Estado</h4>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Todo
+						<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="http://35.185.1.61/client/#">Activo</a></li>
+							<li><a href="http://35.185.1.61/client/#">Eliminado</a></li>
+							<li><a href="http://35.185.1.61/client/#">Completado</a></li>
+							<li><a href="http://35.185.1.61/client/#">No publicado</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="listCampaign-client table-responsive">
+				<table class="table">
+					<thead>
+					    <tr>
+					    	<th></th>
+					    	<th>Campaña</th>
+					    	<th>Estado</th>
+					    	<th>Vistas</th>
+					    	<th>Conversiones</th>
+					    	<th>Índice de consersión</th>
+					    	<th></th>
+					    </tr>
+					</thead>
+					<tbody>
+					    <tr>
+					    	<th scope="row"><img src="./Cliente_files/sorteos.png"></th>
+					    	<td class="colCampaignTable-client"><div class="titleTable-client">Sorteo (No. 0000)</div><div class="subTitleTable-client"><a href="http://35.185.1.61/client/#">http://looivi/</a></div></td>
+					    	<td><div class="statusTable-client">Activo</div></td>
+					    	<td>0</td>
+					    	<td>0</td>
+					    	<td>0,00%</td>
+					    	<td><i class="fa fa-cog" aria-hidden="true"></i></td>
+					    </tr>
+					    <tr>
+					    	<th scope="row"><img src="./Cliente_files/sorteos.png"></th>
+					    	<td class="colCampaignTable-client"><div class="titleTable-client">Sorteo (No. 0000)</div><div class="subTitleTable-client"><a href="http://35.185.1.61/client/#">http://looivi/</a></div></td>
+					    	<td><div class="statusTable-client">Activo</div></td>
+					    	<td>0</td>
+					    	<td>0</td>
+					    	<td>0,00%</td>
+					    	<td><i class="fa fa-cog" aria-hidden="true"></i></td>
+					    </tr>
+					    <tr>
+					    	<th scope="row"><img src="./Cliente_files/sorteos.png"></th>
+					    	<td class="colCampaignTable-client"><div class="titleTable-client">Sorteo (No. 0000)</div><div class="subTitleTable-client"><a href="http://35.185.1.61/client/#">http://looivi/</a></div></td>
+					    	<td><div class="statusTable-client">Activo</div></td>
+					    	<td>0</td>
+					    	<td>0</td>
+					    	<td>0,00%</td>
+					    	<td><i class="fa fa-cog" aria-hidden="true"></i></td>
+					    </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./Cliente_files/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./Cliente_files/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./Cliente_files/swiper.min.js"></script>
+	<script type="text/javascript" src="./Cliente_files/animation.js"></script>
+	<script type="text/javascript">
+		var swiper;
+		function onInit() {
+			if ($(window).width() >= 971) { 
+				preView = 4;
+	       	}  
+
+			if ($(window).width() <= 970 && $(window).width() >= 768) { 
+				preView = 2;
+	       	}  
+
+	       	if ($(window).width() <= 768) { 
+				preView = 1;
+	       	} 
+			swiper = new Swiper('.slider-client', {
+		        pagination: '.swiper-pagination',
+		        slidesPerView: preView,
+		        paginationClickable: true,
+		        spaceBetween: 0,
+		        keyboardControl: true,
+		        speed: 1000,
+		        autoplay: 10000,
+		        loop: true,
+		       	nextButton: '.swiper-button-next',
+        		prevButton: '.swiper-button-prev'
+		    });
+		}
+
+		function btnMenuBehavior(){
+			let btnMenu = $('#hamburger-menu');
+			if(btnMenu.hasClass('open')){
+				btnMenu.removeClass('open');
+				$('#menu').removeClass('open-menu');
+				$('.filter-menu').fadeToggle();
+			}else{
+				btnMenu.addClass('open');
+				$('#menu').addClass('open-menu');
+				$('.filter-menu').fadeToggle();
+			}
+		}
+	</script>
+
+
+</body></html>
