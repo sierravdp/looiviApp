@@ -11,7 +11,6 @@ class Signup(View):
 		 	em = request.POST.get('email')
 		 	if (business_exist(em)):
 		 		context = {"registered": True}
-		 		print("EL PERFIL YA EXISTE en get")
 		 		return render(request, 'signup.html', context)
 		 	else:
 		# 		un = request.POST.get('name')
@@ -25,10 +24,8 @@ class Signup(View):
 		# 		admin.save()
 		# 		new_admin = Business.objects.filter(email=em,password=passw)
 		# 		context = {"admin": new_admin[0], 'authenticated':True}
-				print("EL PERFIL FUE CREADO en get")
 		 		return render(request, 'client/index.html', context)
 		else:
-			print("NOFUE POR EMAIL")
 			return render(request, 'signup.html',{})
 
 	def post(self, request, *args, **kwargs):
@@ -37,7 +34,6 @@ class Signup(View):
 		 	em = request.POST.get('email')
 		 	if (business_exist(em)):
 		 		context = {"registered": True}
-		 		print("EL PERFIL YA EXISTE")
 		 		return render(request, 'signup.html', context)
 		 	else:
 		# 		un = request.POST.get('name')
@@ -51,7 +47,6 @@ class Signup(View):
 		# 		admin.save()
 		# 		new_admin = Business.objects.filter(email=em,password=passw)
 		# 		context = {"admin": new_admin[0], 'authenticated':True}
-				print("EL PERFIL FUE CREADO")
 		 		return render(request, 'client/index.html', context)
 		else:
 			print("NOFUE POR EMAIL")
