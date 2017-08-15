@@ -7,28 +7,54 @@ from django.views.generic import TemplateView
 
 class Signup(View):
 	def get(self, request, *args, **kwargs):
-		return render(request, 'signup.html', {})
-
-	def post(self, request, *args, **kwargs):
-		# if request.method == 'POST' and 'new_business' in request.POST:
-		# 	em = request.POST.get('email')
-		# 	if (business_exist(em)):
-		# 		context = {"registered": True}
-		# 		return render(request, 'signup.html', context)
-		# 	else:
+		if 'new_business' in request.POST:
+		 	em = request.POST.get('email')
+		 	if (business_exist(em)):
+		 		context = {"registered": True}
+		 		print("EL PERFIL YA EXISTE en get")
+		 		return render(request, 'signup.html', context)
+		 	else:
 		# 		un = request.POST.get('name')
 		# 		ln = request.POST.get('lastname')
-		# 		#gend = request.POST.get('gender')
+		 		#gend = request.POST.get('gender')
 		# 		company = request.POST.get('company')
-		# 		em = request.POST.get('email')
-		# 		passw = request.POST.get('password')
+		 		em = request.POST.get('email')
+		 		passw = request.POST.get('password')
 		# 		url = company+".com"
 		# 		admin = Business.objects.create(sites=url,firstname=un,lastname=ln,email=em, password=passw,company_name=company)
 		# 		admin.save()
 		# 		new_admin = Business.objects.filter(email=em,password=passw)
 		# 		context = {"admin": new_admin[0], 'authenticated':True}
-		# 		return render(request, 'business.html', context)
-		# else:
+				print("EL PERFIL FUE CREADO en get")
+		 		return render(request, 'client/index.html', context)
+		else:
+			print("NOFUE POR EMAIL")
+			return render(request, 'signup.html',{})
+
+	def post(self, request, *args, **kwargs):
+		print("EL PERFIL SE ESTA COMPROBANDO")
+		if request.method == 'POST' and 'new_business' in request.POST:
+		 	em = request.POST.get('email')
+		 	if (business_exist(em)):
+		 		context = {"registered": True}
+		 		print("EL PERFIL YA EXISTE")
+		 		return render(request, 'signup.html', context)
+		 	else:
+		# 		un = request.POST.get('name')
+		# 		ln = request.POST.get('lastname')
+		 		#gend = request.POST.get('gender')
+		# 		company = request.POST.get('company')
+		 		em = request.POST.get('email')
+		 		passw = request.POST.get('password')
+		# 		url = company+".com"
+		# 		admin = Business.objects.create(sites=url,firstname=un,lastname=ln,email=em, password=passw,company_name=company)
+		# 		admin.save()
+		# 		new_admin = Business.objects.filter(email=em,password=passw)
+		# 		context = {"admin": new_admin[0], 'authenticated':True}
+				print("EL PERFIL FUE CREADO")
+		 		return render(request, 'client/index.html', context)
+		else:
+			print("NOFUE POR EMAIL")
 			return render(request, 'signup.html',{})
 
 class Login(View):

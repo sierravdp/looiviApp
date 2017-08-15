@@ -534,6 +534,7 @@
 						    border-radius: 2px;
 						    background-color: #CBCBCB;
 						    color: #848484;
+						    font-family: 'NutMeg';
 						}
 
 						.dropdownMenu-client .open>.dropdown-toggle.btn-default{
@@ -553,7 +554,7 @@
 				}
 
 					.listCampaign-client table thead tr{
-						
+						font-family: 'NutMeg';
 					}
 
 					.listCampaign-client table thead th{
@@ -584,10 +585,12 @@
 						padding: 2px 5px;
 						background-color: #5CA499;
 						color: #fff;
+						font-family: 'Nutmeg';
 					}
 
 					.listCampaign-client table tbody td .titleTable-client{
 						color: #5CA499;
+						font-family: 'NutMeg';
 					}
 
 					.listCampaign-client table tbody td .subTitleTable-client a

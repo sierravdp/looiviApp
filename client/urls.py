@@ -1,5 +1,5 @@
 from django.conf.urls import include, url
-from .views import Index, Campaigns, Tools, Prices, Login, Team
+from .views import Index, Campaigns, Tools, Prices, Login, Team, Signup
 from clientcrm.views import CIndex, Campaign, Create
 
 urlpatterns = [
@@ -9,6 +9,7 @@ urlpatterns = [
 	url(r'^precios/$', Prices.as_view(), name='prices'),
 	url(r'^equipo/$', Team.as_view(), name='team'),
 	url(r'^iniciar/$', Login.as_view(), name='login'),
+	url(r'^registrarse/$', Signup.as_view(), name='signup'),
 	url(r'^cliente/$', CIndex.as_view(), name='clientcrm'),
 	url(r'^campanas/$', Campaigns.as_view(), name='campaign-index'),
 	url(r'^cliente/create$', Create.as_view(), name='create'),
