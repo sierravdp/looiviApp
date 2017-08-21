@@ -49,6 +49,7 @@ class Signup(View):
 		# 		context = {"admin": new_admin[0], 'authenticated':True}
 		 		return render(request, 'client/index.html', context)
 		else:
+			#print("NOFUE POR EMAIL")
 			return render(request, 'signup.html',{})
 
 class Login(View):
