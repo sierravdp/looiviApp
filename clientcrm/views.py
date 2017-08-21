@@ -48,7 +48,7 @@ class CIndex(View):
 			else:
 				context = {'authenticated':False}
 				return render(request, 'login.html', context)
-		if request.method == 'POST' and 'fb_login' in request.POST:
-			print request
+		#if request.method == 'POST' and 'fb_login' in request.POST:
+		#	print request
 		else:
 			return render(request, 'login.html',{})
