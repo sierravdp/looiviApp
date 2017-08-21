@@ -1,0 +1,173 @@
+<style>
+	/*** TEAM  ***/
+
+.container-team{
+	padding: 84px 32px;
+	margin: 0px !important;
+	/*background-color: #fff;*/
+	/*transform: rotate(20deg);*/
+	position: relative;
+	z-index: 3;
+}
+
+.container-img-team{
+	width: 100%;
+	min-height: 300px;
+	text-align: center;
+	padding: 16px 0px;
+	position: relative;
+}
+
+.image-oval-team{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.image-team{
+	display: inline-block;
+	vertical-align: middle;
+	width: 225px;
+	height: 225px;
+	max-width: 225px;
+	max-height: 225px;
+	border-radius: 50%;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	/*left: 20%;
+	top: 50%;
+	transform: translate(-50%, -50%);*/
+	transition: 0.3s ease;
+	box-shadow: -2px 3px 10px rgba(0, 0, 0, 0.3);
+	z-index: 2;
+	border: 2px solid #5ca499;
+	padding: 8px;
+	background-color: #fff;
+}
+
+
+.container-text-team{
+	background-color: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: -32px;
+	padding: 4px 16px 16px 32px;
+	position: relative;
+	min-height: 125px;
+	width: 50%;
+	/*border: 1px solid #ccc;*/
+	border-radius: 10px;
+	transition: 0.3s ease;
+	box-shadow: 2px 3px 10px rgba(155, 155, 155, 0.5);
+	z-index: 1;
+	
+	/*left: 65%;
+	top: 50%;
+	transform: translate(-50%, -50%);*/
+}
+
+.container-text-team h3{
+	text-align: left;
+	color: #5ca499;
+	padding-left: 8px;
+	font-family: 'Montserrat';
+}
+
+.container-text-team label{
+	width: 100%;
+	text-align: left;
+	color: #bbb;
+	padding-left: 8px;
+	font-family: 'NutmegThin';
+	font-weight: 300;
+}
+
+
+
+@media screen and (max-width: 768px) {
+	
+	.container-team{
+		padding: 32px 0px;
+	}
+
+}	
+
+@media screen and (max-width: 714px) {
+	
+	.container-text-team{
+		margin-left: 0px;
+		margin-top: -32px;
+		padding-top: 32px;
+		padding-left: 16px;
+		width: 100%;
+	}
+
+	.container-text-team h3, .container-text-team label{
+		text-align: center;
+		padding-left: 0px;
+	}
+
+	.integrate-team{
+		margin-bottom: 48px;
+	}
+}
+
+</style>
+
+<div id="team" class="row container-team">
+	<div class="title-section ">
+		<div class="content-title-icon s-animate s-scroll v_hidden" data-space="0.6" data-animation="zoomIn" data-time="0.3">
+			<i class="fa fa-users" aria-hidden="true"></i>
+		</div>
+		<h1 class="s-animate s-scroll v_hidden" data-space="0.6" data-animation="fadeInLeft" data-time="0.7">Nuestro Equipo</h1>
+	</div>
+	<div class="col-md-6 integrate-team" >
+		<div class="container-img-team">
+			<div class="image-team s-animate s-scroll v_hidden" data-space="0.6" data-animation="zoomIn" data-time="0.3"  >
+				<div class="image-oval-team" style="background-image: url('./img/1.jpg');"></div>
+			</div>
+			<div class="container-text-team s-animate s-scroll  v_hidden" data-space="0.6" data-animation="fadeInLeft" data-time="0.85">
+				<h3>Sebastian Vargas Arenas</h3>
+				<label for="">Full Stack Developer</label>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 integrate-team" >
+		<div class="container-img-team">
+			<div class="image-team s-animate s-scroll v_hidden" data-space="0.6" data-animation="zoomIn" data-time="0.5"  >
+				<div class="image-oval-team" style="background-image: url('./img/2.jpg');"></div>
+			</div>
+			<div class="container-text-team s-animate s-scroll  v_hidden" data-space="0.6" data-animation="fadeInLeft" data-time="0.85">
+				<h3>Andres Guerra</h3>
+				<label for="">DevOps</label>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 integrate-team" >
+		<div class="container-img-team">
+			<div class="image-team s-animate s-scroll v_hidden" data-space="0.6" data-animation="zoomIn" data-time="0.7"  >
+				<div class="image-oval-team" style="background-image: url('./img/2.jpg');"></div>
+			</div>
+			<div class="container-text-team s-animate s-scroll  v_hidden" data-space="0.6" data-animation="fadeInLeft" data-time="0.85">
+				<h3>Andres Guerra</h3>
+				<label for="">DevOps</label>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 integrate-team" >
+		<div class="container-img-team">
+			<div class="image-team s-animate s-scroll v_hidden" data-space="0.6" data-animation="zoomIn" data-time="0.9" >
+				<div class="image-oval-team" style="background-image: url('./img/1.jpg');"></div>
+			</div>
+			<div class="container-text-team s-animate s-scroll  v_hidden" data-space="0.6" data-animation="fadeInLeft" data-time="0.85">
+				<h3>Andres Guerra</h3>
+				<label for="">DevOps</label>
+			</div>
+		</div>
+	</div>
+</div>

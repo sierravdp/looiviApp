@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	<title>Campañas</title>
+	<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% if user and not user.is_anonymous %} 
+	 {{ user.get_full_name }}  {% endif %} </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/hamburgers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/slidemenu.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/client/client.css' %}">
+</head>
+<body>
+	{% include 'client/header.html' %}
+	<div class="contentWrapper-client">
+		<div class="upMenu-client">
+			<ul>
+				<li class="main-li"> <strong> » Campañas </strong></li>
+				<li>|</li>
+				<li class="sub-li"> <strong> Sorteo (No. 0000) </strong></li>
+				<!--<li>Editar plantilla</li>-->
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="row workspace">
+			<div class="col-md-2 col-lg-2 col-sm-2 sidespace">
+				<div class="first-slide">
+					<a href="#">Reporte de actividades</a>
+					<a href="#">Prospectos</a>
+					<a href="#">Árbol de referidos</a>
+				</div>
+				<div class="second-slide">
+					<a href="#">Editar</a>
+				  	<a href="#">Parar</a>
+			 		<a href="#">Republicar</a>
+			 		<a href="#">Eliminar</a>	
+			 		<a href="#">Editar</a>
+				  	<a href="#">Parar</a>
+			 		<a href="#">Republicar</a>
+			 		<a href="#">Eliminar</a>	
+				</div>
+			</div>
+			<div class="col-md-10 col-lg-10 col-sm-10 col-camp">
+				<div class="analytics-camp">
+					<a href="#">Lorem</a>
+				  	<a href="#">Lorem</a>
+					<a href="#">Lorem</a>
+					<div class="analytic1">
+					</div>	
+					<div class="contentList-client">
+					<div class="listCampaign-client table-responsive">
+					<table class="table">
+						<thead>
+						    <tr>
+						    	<th></th>
+						    	<th>Campaña</th>
+						    	<th>Estado</th>
+						    	<th>Vistas</th>
+						    	<th>Conversiones</th>
+						    	<th>Índice de consersión</th>
+						    	<th></th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						    	<th scope="row"><img src="{% static 'img/client/sorteos.png' %}"></th>
+						    	<td class="colCampaignTable-client"><div class="titleTable-client">Sorteo (No. 0000)</div><div class="subTitleTable-client"><a href="http://35.185.1.61/client/#">http://looivi/</a></div></td>
+						    	<td><div class="statusTable-client">Activo</div></td>
+						    	<td>0</td>
+						    	<td>0</td>
+						    	<td>0,00%</td>
+						    	<td><i class="fa fa-cog" aria-hidden="true"></i></td>
+						    </tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{% static 'js/slidemenu.js'%}"></script>
+</body>
+</html>

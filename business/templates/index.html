@@ -1,0 +1,348 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Looivi</title>
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/general.css' %}" rel="stylesheet" />
+     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="{% static 'assets/plugins/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'assets/plugins/bootstrap.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <style type="text/css">
+        @font-face {
+            font-family: ginora;
+            src: url({% static 'fonts/NutmegRegular.otf' %});
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#home"><img class="logo" src="{% static 'images/looivi-logo-blanco.png' %}" width="100" /></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <!--<ul class="nav navbar-nav">
+                    <li><a class="text_menu" href="#work-sec">Servicios</a>
+                    </li>
+                    <li><a class="text_menu" href="#price-sec">Precios</a>
+                    </li>   
+                </ul>-->
+                <ul class="nav navbar-nav navbar-right text_menu">
+                    <li style="left: -25%"><a class="text_menu" href="#work-sec">Aplicaciones</a>
+                    </li>
+                    <!--<li style="left: -25%"><a class="text_menu" href="#tools"><strong>Herramientas</strong></a>
+                    </li>-->
+                    <li style="left: -25%"><a class="text_menu" href="{% url 'prices' %}">Precios</a>
+                    </li> 
+                    <li style="left: -25%;"><a class="text_menu" href="{% url 'login' %}" id="login"> Iniciar</a></li>
+                    <div class="signup"> <li><a class="signup_button" href="{% url 'signup' %}" > Registrarse</a></li></div>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="home">
+        <div class="row">
+            <div class="col-md-12" >
+                <h1></h1>
+                <h1 class="head-phrase text-center"> Atrae más prospectos</h1>
+                <h3 class="head-second-phrase text-center"> Con aplicaciones y herramientas de mercadeo viral para plataformas digitales. </h3>
+                <h1></h1><h1></h1>
+                <div class="col-md-12 text-center">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4"><button type="submit" class="main-button" style="vertical-align:middle" data-toggle="modal"   data-target="#signupModal"><span>Prueba Gratis</span></button></div>
+                    <div class="col-md-4"><button class="btn normal-button">Más información</button></div>    
+                    <div class="col-md-2"></div>
+                </div>
+                
+                
+                <!--<button type="submit" class="big-button" style="vertical-align:middle" data-toggle="modal" data-target="#signupModal"><span>Prueba Looivi gratis </span></button>
+                <button type="submit" class="big-button" style="vertical-align:middle" data-toggle="modal" data-target="#signupModal"><span>Ver posibilidades </span></button>-->
+                <h1></h1><h1></h1><h1></h1>
+            </div>
+        </div>
+    </div>
+  
+    <section class="color-white section-class" id="about"  >
+       <div class="container" >
+          
+                <div class="row" >
+                    <div class="col-md-12 " style="width: 100%;">
+                        <h2 style="padding-top:40px; color: #F5495D; font-size: 36px">Atrae, comprende y convierte mas prospectos en clientes.  </h2>
+                        <h2></h2>
+                        <!--<h4>
+                            <strong>
+                                utiliza herramientas en redes sociales que facilitan tu trabajo desde la primera campaña.
+                            </strong>
+                        </h4>-->
+                    </div>
+                </div>
+          </div>
+    </section>
+<!--
+       <section class=" color-light">
+</section>-->
+
+   <!-- WORK Flow Section -->  
+    <section class="color-light section-class" id="work-sec"  >
+        <div class="container">
+            <h2 style="left: 0px;">Enamora a tus prospectos</h2>
+            <hr size="8px" style="width: 10%; position: relative; left: -43%; top:-15px; " />
+            <h3 style="left: 2%; position: relative; top: -15px;"> Con las aplicaciones más efectivas y sencillas para marketing viral. </h3>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="ch-grid">
+                        <div class="col-md-4">
+                        <li>
+                            <div class="ch-item">               
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1"></div>
+                                    <div class="ch-info-back">
+                                        <h4>Concurso</h4>
+                                    </div>  
+                                </div>
+                            </div>
+                        </li></div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                        <li>
+                            <div class="ch-item">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-2"></div>
+                                    <div class="ch-info-back">
+                                        <h4>Cupones</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li></div>
+                    </ul>    
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-4 p-18">
+                        Crea concursos que consiguen prospectos de alta calidad. 
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 p-18">
+                        Crea cupones que atraen y convierte tus prospectos en clientes.
+                    </div>
+                    <!--<div class="col-md-4 p-18">
+                        Ofertas directas que convierten tus leads rápidamente en ventas. 
+                    </div>-->
+                </div>
+                <div class="col-md-12">
+                    <ul class="ch-grid">
+                        <div class="col-md-4">
+                        <li>
+                            <div class="ch-item">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-3"></div>
+                                    <div class="ch-info-back">
+                                        <h4>Ofertas</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                        <li>
+                            <div class="ch-item">               
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-4"></div>
+                                    <div class="ch-info-back">
+                                        <h4>Ofertas <br>de grupos</h4>
+                                    </div>  
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6"></div>
+                    </ul>    
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-4 p-18">
+                        Ofertas directas que convierten tus leads rápidamente en ventas. 
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 p-18">
+                        Logra que tus prospectos hagan todo el trabajo de marketing. 
+                    </div>
+                    <!--<div class="col-md-4">
+                    </div>-->
+                </div>
+            </div>
+            <div class="col-md-12">
+            <br> <br>
+                <center>
+                    <button type="submit" class="app-button" data-toggle="modal" data-target="#signupModal"><span><strong>Aprende mas de las aplicaciones.</strong> </span></button>
+                </center>    
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- What can i do Section -->  
+    <section class="for-full-back color-bg-one section-class" id="work-sec"  >
+        <div class="container" style="color: #FFF;">
+            <h2 style="left: 0px;">Logra más con menos</h2>
+            <hr size="8px" style="width: 10%; position: relative; left: -43%; top:-15px; " />
+            <h3 style="left: 2%; position: relative;padding-top: 18px;"> Con más plataformas digitales para subir tus campañas logras atraer y convertir más prospectos.</h3>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div>
+                            <h2 style="color: #F5495D;">Email marketing</h2>
+                        </div>
+                        <div style="font-size: 18px;">
+                            Convierte más prospectos en clientes cuando enlazas tus campañas de Looivi con plataformas de email marketing. 
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <h2 style="color: #F5495D;">Redes sociales</h2>
+                        </div>
+                        <div style="font-size: 18px;">
+                            Atrae más fans en redes sociales con campanas de hashtags, concursos de fotos y con encuestas. 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                <br><br>
+                    <div class="col-md-6">
+                        <div>
+                            <h2 style="color: #F5495D;">Generación de prospectos</h2>
+                        </div>
+                        <div style="font-size: 18px;">
+                            Consigue nuevos prospectos y conecta con tu audiencia con llamadas a la acción que los inviten a participar de tus descuentos, regalos y promociones instantáneas.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <h2 style="color: #F5495D;">For marketing research</h2>
+                        </div>
+                        <div style="font-size: 18px;">
+                            Aprende lo necesario sobre tu audiencia por medio de encuestas, entrevistas y sondeos. Educa tu audiencia sobre lo que ofreces mientras los involucras a participar con premios por sus comentarios, likes y compartir.
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md-12" style="padding-bottom: 50px;">
+                    
+                    
+                    <h2 class="text-center" style="left: 1px;">Has la prueba gratis</h2>
+                    <center>
+                    <button type="submit" class="app-button text-center" style="width: 300px" data-toggle="modal" data-target="#signupModal"><span><strong>Empieza ahora</strong> </span></button>
+                </center>   
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Where can find section-->
+    <section class="color-white" id="work-sec">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-5">
+                    <center>
+                        <img style="width: 80%;" src="{% static 'images/connection.png' %}"/>
+                    </center>
+                    </div>
+                    <div class="col-md-1 diagonal"></div>
+                    <div class="col-md-6">
+                        <div>
+                            <center><p style="color: #5FB09F;font-size: 45px; line-height: normal; padding-top: 20px;">¿Dónde puedes tener tus aplicaciones?</p>
+                                <p style="color: #F5495D; font-size: 22px;">Usa tu campaña en cualquiera de estos lugares </p>
+                            </center>
+                        </div>
+                        <div class="text-center">
+                            <img class="logo" src="{% static 'images/mobile.png' %}">
+                            <img class="logo" src="{% static 'images/web.png' %}">
+                            <img class="logo" src="{% static 'images/soc_net.png' %}">
+                            <img class="logo" src="{% static 'images/pages.png' %}">
+                            <img class="logo" src="{% static 'images/blogs.png' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Footer - about team section -->
+    <section class="for-full-back color-bg-one section-class" id="tryFree-sec">
+        <div class="container">
+            <div class="row">
+                <div class="row" style="color: #fff;">
+                    <h2 style="left: 0px;">El equipo</h2>
+                    <hr size="8px" style="width: 10%; position: relative; left: -43%; top:-15px; " />
+                    <h3 style="left: 2%; position: relative;padding-top: 18px;"> Lorem impsum sit amen dolor.</h3>
+                    <div class="col-md-12" style="padding-bottom: 50px;">
+                        <!--<button type="submit" class="big-button" style="vertical-align:middle" data-toggle="modal" data-target="#signupModal"><span>Empieza ahora </span></button>-->
+                        <div class="col-md-6">
+                            <button class="circle-about"></button>
+                            <button class="square-about" style="color: #fff">
+                                <h3>Roslym González</h3>
+                                <p class="p-about">Co-fundador y director de la felicidad</p>
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="circle-about"></button>
+                            <button class="square-about" style="color: #fff">
+                                <h3>Roslym González</h3>
+                                <p class="p-about">Co-fundador y director de la felicidad</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="padding-bottom: 50px;">
+                        <!--<button type="submit" class="big-button" style="vertical-align:middle" data-toggle="modal" data-target="#signupModal"><span>Empieza ahora </span></button>-->
+                        <div class="col-md-6">
+                            <button class="circle-about"></button>
+                            <button class="square-about" style="color: #fff">
+                                <h3>Roslym González</h3>
+                                <p class="p-about">Co-fundador y director de la felicidad</p>
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="circle-about"></button>
+                            <button class="square-about" style="color: #fff">
+                                <h3>Roslym González</h3>
+                                <p class="p-about">Co-fundador y director de la felicidad</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div  class="for-full-back "  id="footer" >
+    <center>
+        Looivi | Todos los derechos reservados
+    </center>
+    </div>
+    
+    
+</body>
+</html>

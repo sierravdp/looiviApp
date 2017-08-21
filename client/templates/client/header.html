@@ -1,0 +1,44 @@
+{% load staticfiles %}
+
+<header>
+	<a href="{% url 'clientcrm' %}">
+		<div class="logo-client">
+			<img src="{% static 'img/logo.png' %}">
+		</div>
+	</a>
+		<div id="hamburger-menu" onclick="btnMenuBehavior();">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="filter-menu" onclick="btnMenuBehavior();"></div>
+		<div id="menu" class="nav-client">
+			<ul>
+				<li class="respons-client"><a href="http://35.185.1.61/client/#">Perfil</a></li>
+				<li class="active"><a href="{% url 'campaign' %}">Concurso</a></li>
+				<li>|</li>
+				<li><a href="http://35.185.1.61/client/#">Contactos</a></li>
+				<li class="respons-client"><a href="http://35.185.1.61/client/#">Notificaciones</a></li>
+			</ul>
+		</div>
+		<div class="profileContent-client">
+			<div class="notification-client">
+				<a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+			</div>
+			<div class="profile-client dropdown">
+				<button id="hamburger" class="dropbtn hamburger hamburger--squeeze" type="button" onmouseover="openHamburger();" onmouseout="closeHamburger();">
+				  	<span class="hamburger-box">
+				    	<span class="hamburger-inner"></span>
+				  	</span>
+				</button>
+				<div class="dropdown-content">
+				  	<a href="#">Perfil</a>
+			    	<a href="#">Upgrade</a>
+			   		<a href="#">Salir</a>
+			  	</div>
+				<!--<div class="imageProfile-client">
+					<div class="imgProfile-client"></div>
+				</div>-->
+			</div>
+		</div>
+	</header>
