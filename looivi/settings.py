@@ -26,7 +26,7 @@ SECRET_KEY = '(37b+w=6j*nbbeo!!^(4_bz0r241za+tj$iwmm-qwrl$pggu_('
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.looivi.com','localhost']
+ALLOWED_HOSTS = ['www.looivi.com','localhost','looivi.herokuapp.com']
 
 
 # Application definition
