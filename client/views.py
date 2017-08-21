@@ -88,10 +88,17 @@ class Team(View):
 
 class Tools(View):
 	def get(self, request, *args, **kwargs):
+<<<<<<< HEAD
 		return render(request, 'tools1.html', {})
 
 	def post(self, request, *args, **kwargs):
 		return render(request, 'tools1.html', {})
+=======
+		return render(request, 'tools.html', {})
+
+	def post(self, request, *args, **kwargs):
+		return render(request, 'tools.html', {})
+>>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
 
 class Campaigns(View):
 	def get(self, request, *args, **kwargs):

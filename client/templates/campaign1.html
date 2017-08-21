@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 {% load staticfiles %}
 {% load static %}
@@ -50,4 +51,46 @@
 	<script type="text/javascript" src="{% static 'js/swiper.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
+=======
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load static %}
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Looivi</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body onload="onInit();">
+{% include "header1.html" %}
+<div id="campaign" class="row container-campaign">
+	<div class="cols-campaign col-md-12 col-sm-12">
+		<div class="wrapper-campaign leftContent-campaign">
+			<div class="leftBackgroundImage-campaign"></div>
+			<div class="backgroundColor-campaign"></div>
+			<div class="content-campaign">
+				<div class="contentTxt-campaign">
+					<div class="title-campaign">Enamora a tus prospectos</div>
+					<hr size="8px" style="width: 14%; position: relative; left: -42%; top:-10px; color: #c2c2c2" />
+					<div class="description-campaign">
+						<p>Con las aplicaciones más efectivas y sencillas para el marketing viral.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/animation.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/swiper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+>>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (function () {
     BizTrackingA.GoAccount({
         webToLeadField: '',
@@ -9,4 +10,17 @@
         interceptAjax: 'true' === 'true'
     });
 })();
+=======
+(function () {
+    BizTrackingA.GoAccount({
+        webToLeadField: '',
+        chatEnabled: 'true' === 'true',
+        XUserId: 'f7754c4a32c949ab9ff7d1d44b0b518d',
+        formProviderEnabled: 'true' === 'true',
+        attach_secure_forms: 'true' === 'true',
+        viewThroughEnabled: 'false' === 'true',
+        interceptAjax: 'true' === 'true'
+    });
+})();
+>>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
 ;
