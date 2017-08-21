@@ -1057,7 +1057,6 @@ header{
 
 .text{
   color: #555;
-<<<<<<< HEAD
   font-family: NutMeg;
 }
 
@@ -1067,44 +1066,10 @@ header{
 
 .text h2{
   font-size: 35px;
-=======
-  font-family: NutMeg
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
-}
-
-
-.diagonal-shadow1{
-<<<<<<< HEAD
-  left: 51%;
-=======
-  left: 50%;
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
-  height: 0px;
-  top: 0%;
-  position: relative;
-  width: 60%;
-  opacity: 1;
-  /*border-right: thick solid #F5495D; */
-  background-color: #eee;
-  z-index: 3;
-  box-shadow: 115px 4px 10px 4px #F5495D;
-  background-color: transparent;
-
-  -ms-transform: skewX(-10deg); /* IE 9 */
-  -webkit-transform: skewX(-10deg); /* Safari */
-<<<<<<< HEAD
-  transform: skewX(50deg); /* Standard syntax */
 }
 
 .diagonal-shadow2{
   left: 31%;
-=======
-  transform: skewX(18deg); /* Standard syntax */
-}
-
-.diagonal-shadow2{
-  left: 30%;
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
   height: 0px;
   top: 0%;
   position: relative;
@@ -1118,7 +1083,6 @@ header{
 
   -ms-transform: skewX(-10deg); /* IE 9 */
   -webkit-transform: skewX(-10deg); /* Safari */
-<<<<<<< HEAD
   transform: skewX(225deg); /* Standard syntax */
 }
 
@@ -1146,37 +1110,16 @@ header{
   top: 0%;
   position: relative;
   width: 45%;
-=======
-  transform: skewX(18deg); /* Standard syntax */
-}
-
-.diagonal-shadow3{
-  left: -20%;
-  height: 0px;
-  top: 0%;
-  position: relative;
-  width: 100%;
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
   opacity: 1;
   /*border-right: thick solid #F5495D; */
   background-color: #eee;
   z-index: 3;
-<<<<<<< HEAD
   box-shadow: 115px 4px 10px 5px #5FB09F;
   background-color: transparent;
 
   -ms-transform: skewX(-10deg); /* IE 9 */
   -webkit-transform: skewX(-10deg); /* Safari */
   transform: skewX(-18deg); /* Standard syntax */
-=======
-  box-shadow: 115px 0px 10px 4px #F5495D;
-  background-color: transparent;
-  z-index: 8;
-
-  -ms-transform: skewY(-10deg); /* IE 9 */
-  -webkit-transform: skewY(-10deg); /* Safari */
-  transform: skewY(72deg); /* Standard syntax */
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
 }
 
 .diagonal-div{
@@ -1375,10 +1318,7 @@ header{
   height: .5rem;
   width: 100%;
   background-color: #C0C0C0;
-<<<<<<< HEAD
   position: relative;
-=======
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
 }
 .audio-progress .bar {
   height: 100%;
@@ -1389,17 +1329,10 @@ header{
   display: block;
   position:absolute;
   z-index: 1;
-<<<<<<< HEAD
   margin-top: -10px;
   margin-left: -10px;
   width: 20px;
   height: 20px;
-=======
-  margin-top: -5px;
-  margin-left: -10px;
-  width: 10px;
-  height: 10px;
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
   border: 4px solid #D3D5DF;
   border-top-color: #D3D5DF;
   border-right-color: #D3D5DF;
@@ -1411,7 +1344,6 @@ header{
 }
 
 .draggable {
-<<<<<<< HEAD
   float: left; margin: 0 10px 10px 5px;
 }
 
@@ -1424,9 +1356,6 @@ header{
   margin-bottom: 1em;
   border-style: solid;
   border-width: 1px;
-=======
-  float: left; margin: 0 10px 10px 0;
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
 }
 
 progress {
@@ -1507,11 +1436,7 @@ progress {
   }
 
   .content-btns{
-<<<<<<< HEAD
     padding-top: 13px;
-=======
-    padding-top: 0px;
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
     top: 0px;
   }
 
@@ -1721,7 +1646,6 @@ progress {
 
 
 /***************************************** CAMPAING ************************************************/
-<<<<<<< HEAD
 .campaign-solo{
   font-family: 'NutMeg';
   padding-top: 80px;
@@ -1775,8 +1699,6 @@ progress {
       padding-left: 30px;
       width: 40%;
 }
-=======
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
 
   .leftRhombus-campaign{
     position: absolute;
@@ -2108,13 +2030,8 @@ progress {
     .centerContent-services{
       background-color: transparent;
       overflow: hidden;
-<<<<<<< HEAD
       width: 400px;
       height: 400px;
-=======
-      width: 300px;
-      height: 300px;
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
       padding: 0px;
       border-radius: 50%;
       position: absolute;
@@ -2396,13 +2313,8 @@ progress {
 .ctn-plans{
   position: relative;
   z-index: 2;
-<<<<<<< HEAD
   margin-left: auto;
   padding: 120px 32px;
-=======
-  margin:0;
-  padding: 84px 32px;
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
   background-color: #eee;
 }
 

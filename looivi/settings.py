@@ -23,11 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(37b+w=6j*nbbeo!!^(4_bz0r241za+tj$iwmm-qwrl$pggu_('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
+
 DEBUG = True
-=======
-DEBUG = False
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
 
 ALLOWED_HOSTS = ['www.looivi.com','localhost']
 
@@ -90,7 +87,6 @@ WSGI_APPLICATION = 'looivi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-<<<<<<< HEAD
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -104,21 +100,20 @@ DATABASES = {
 #import dj_database_url
 #db_from_env = dj_database_url.config()
 #DATABASES['default'].update(db_from_env)
-=======
-#DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     'NAME': 'looivi',
-    #     'USER': 'postgres',
-    #     'PASSWORD': '123456',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432',
-    # }
-#}
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
->>>>>>> 376cc5db5f3cd684314c2e6bcb1ecab2081891c5
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'looivi',
+        'USER': 'postgres',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+#import dj_database_url
+#db_from_env = dj_database_url.config()
+#DATABASES['default'].update(db_from_env)
 
 
 # Password validation
