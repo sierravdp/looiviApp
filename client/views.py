@@ -29,7 +29,6 @@ class Signup(View):
 			return render(request, 'signup.html',{})
 
 	def post(self, request, *args, **kwargs):
-		print("EL PERFIL SE ESTA COMPROBANDO")
 		if request.method == 'POST' and 'new_business' in request.POST:
 		 	em = request.POST.get('email')
 		 	if (business_exist(em)):
@@ -68,7 +67,7 @@ class Login(View):
 		# 		context = {'authenticated':False}
 		# 		return render(request, 'login.html', context)
 		#if request.method == 'POST' and 'fb_login' in request.POST:
-		# 	print request
+		# 	print (request)
 		#else:
 		return render(request, 'login.html',{})
 
