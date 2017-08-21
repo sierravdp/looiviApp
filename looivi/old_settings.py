@@ -24,7 +24,7 @@ SECRET_KEY = '(37b+w=6j*nbbeo!!^(4_bz0r241za+tj$iwmm-qwrl$pggu_('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.looivi.com','localhost']
 
